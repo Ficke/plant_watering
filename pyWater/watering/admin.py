@@ -12,4 +12,12 @@ class PlantAdmin(admin.ModelAdmin):
     ]
     inlines = [WateringInline]
 
+class WateringAdmin(admin.ModelAdmin):
+        fieldsets = [
+        ('Plant Information', {'fields': ['watered_plant']}),
+        ('Date information', {'fields': ['water_date']}),
+    ]
+
+
 admin.site.register(Plant, PlantAdmin)
+admin.site.register(Watering, WateringAdmin)

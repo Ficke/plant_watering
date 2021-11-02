@@ -51,6 +51,7 @@ def water(request):
         return HttpResponseRedirect('/watering/plants')
     else: 
         form = WateringForm()
+        
     return render(request,'watering/name.html',{'form':form})
 
 
