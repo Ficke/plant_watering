@@ -1,7 +1,15 @@
 from django.contrib import admin
+from .models import Watering, Plant
 
-from django.contrib import admin
+class WateringInline(admin.StackedInline):
+    model = Watering
+    extra = 3
 
-from .models import Plant
+class PlantAdmin(admin.ModelAdmin):
+    fieldsets = [
+        (None,               {'fields': ['plant_name']}),
+        ('Date information', {'fields': ['added_date']}),
+    ]
+    inlines = [WateringInline]
 
-admin.site.register(Plant)
+admin.site.register(Plant, PlantAdmin)

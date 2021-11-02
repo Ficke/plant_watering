@@ -9,3 +9,8 @@ class Watering(models.Model):
     watered_plant = models.ForeignKey(Plant, on_delete=models.CASCADE)
     water_date = models.DateTimeField('date watered')
     water_id = models.IntegerField()
+
+    def __str__(self):
+        return self.headline
+
+
