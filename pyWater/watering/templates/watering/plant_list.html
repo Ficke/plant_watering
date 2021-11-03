@@ -1,0 +1,11 @@
+{# watering/templates/watering/plant_list.html #}
+{% load render_table from django_tables2 %}
+<!doctype html>
+<html>
+    <head>
+        <title>List of plants</title>
+    </head>
+    <body>
+        {% render_table object_list %}
+    </body>
+</html>

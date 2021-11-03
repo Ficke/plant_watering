@@ -1,0 +1,24 @@
+<!-- <table>
+    <tr>
+        <th>Field 1</th>
+        ...
+        <th>Field N</th>
+    </tr>
+    {% for item in {query_results} %}
+    <tr> 
+        <td>{{ item.field1 }}</td>
+        ...
+        <td>{{ item.fieldN }}</td>
+    </tr>
+    {% endfor %}
+</table> -->
+
+{% if plant_list %}
+    <ul>
+    {% for plant in plant_list %}
+        <td>{{ plant.plant_name }}</td>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No plants are available.</p>
+{% endif %}
