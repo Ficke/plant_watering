@@ -10,7 +10,7 @@ def home(request):
     name = 'Adam Ficke'
     numbers = [1,2,3,4,5]
     args = {'myName': name, 'numbers':numbers} 
-    return render(request,'watering/login.html',args)
+    return render(request,'watering/home.html',args)
 
 # #Watering page: this is an input for when you water the plant
 def water_plant(request):
