@@ -11,6 +11,6 @@ urlpatterns = [
     path('addplant',views.add_plant,name='add plant'),
     path('plants',views.show_plants,name='plants list'),
     path('watering',views.water,name='watering'),
-    path('table',views.PlantView.as_view()),
+    path('<str:name>/',views.show_water,name='water')
 ]
 

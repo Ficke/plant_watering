@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% if water_list %}
+    Latest Waterings:
+    <ul>
+    {% for water in water_list %}
+        <p>{{ water.water_date }}</p>
+
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No waterings are available.</p>
+{% endif %}
+{% endblock %}

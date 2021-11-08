@@ -1,24 +1,15 @@
-<!-- <table>
-    <tr>
-        <th>Field 1</th>
-        ...
-        <th>Field N</th>
-    </tr>
-    {% for item in {query_results} %}
-    <tr> 
-        <td>{{ item.field1 }}</td>
-        ...
-        <td>{{ item.fieldN }}</td>
-    </tr>
-    {% endfor %}
-</table> -->
+{% extends 'base.html' %}
 
+{% block content %}
 {% if plant_list %}
+    Current List of Plants:
     <ul>
     {% for plant in plant_list %}
-        <td>{{ plant.plant_name }}</td>
+        <p><a href="/watering/{{ plant.id }}">{{ plant.plant_name }}</a></p>
+
     {% endfor %}
     </ul>
 {% else %}
     <p>No plants are available.</p>
 {% endif %}
+{% endblock %}

@@ -7,10 +7,18 @@ from .models import Plant, Watering
 #it takes
 
 class WateringForm(ModelForm): 
+    
     class Meta: 
         model = Watering
         fields = "__all__"
 
+    def __init__(self, *args, **kwargs):
+        user = kwargs.pop('user', None)
+        super(WateringForm, self).__init__(*args, **kwargs)
+        if user is not None:
+            self.fields['watered_plant'].queryset = Plant.objects.filter(user=user)
+
+    
 #Form to add plants 
 class PlantForm(ModelForm):
     class Meta:

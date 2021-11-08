@@ -1,0 +1,24 @@
+{% extends 'base_login.html' %}
+
+<h1>Home</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block head %}
+    <title>Home</title>
+    {% endblock %}
+</head>
+<body>
+    {% block body %}
+    <div class='container'>
+        <h1>Welcome</h1>
+        Welcome! you can login here
+        <a href="http://127.0.0.1:8000/watering/addplant" class="btn btn-primary">Add Plant</a>
+    </div>
+    {% endblock %}
+</body>
+</html>
+
