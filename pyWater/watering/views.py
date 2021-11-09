@@ -5,13 +5,6 @@ from django.views.generic import TemplateView, ListView
 from .models import Watering, Plant
 from .forms import PlantForm, WateringForm, ModelForm
 
-#test page for the login html 
-def home(request):
-    name = 'Adam Ficke'
-    numbers = [1,2,3,4,5]
-    args = {'myName': name, 'numbers':numbers} 
-    return render(request,'watering/home.html',args)
-
 #this will display the last  plants you've added
 def show_plants(request):
     current_user = request.user
@@ -57,7 +50,7 @@ def water(request):
     return render(request,'watering/watering.html',{'form':form})
 
 def show_water(request,name):
-    latest_water = Watering.objects.filter(watered_plant=name)
+    latest_water = Watering.objects.filter(watered_plant=name).order_by('-water_date')[:10]
     context = {'water_list': latest_water}
     return render(request,'watering/show_watering.html', context)
     

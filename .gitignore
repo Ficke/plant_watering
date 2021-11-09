@@ -130,3 +130,7 @@ dmypy.json
 # Pyre type checker
 .pyre/
 pyWater/environment.yml
+
+/staticfiles
+pyWater/static/Pear_Leaf.jpeg
+pyWater/static/235px-Leaf_icon_15.svg.png

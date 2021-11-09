@@ -7,8 +7,7 @@ class WateringInline(admin.StackedInline):
 
 class PlantAdmin(admin.ModelAdmin):
     fieldsets = [
-        ('Name information', {'fields': ['plant_name']}),
-        ('Date information', {'fields': ['added_date']}),
+        ('Name information', {'fields': ['plant_name','added_date']}),
     ]
     inlines = [WateringInline]
 

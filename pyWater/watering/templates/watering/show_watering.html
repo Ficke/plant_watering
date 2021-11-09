@@ -2,8 +2,10 @@
 
 {% block content %}
 {% if water_list %}
+    <p>{{ water_list.watered_plant }}</p>
     Latest Waterings:
     <ul>
+
     {% for water in water_list %}
         <p>{{ water.water_date }}</p>
 
