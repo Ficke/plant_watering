@@ -5,7 +5,7 @@ from django.urls import reverse
 class Plant(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name="Plant", null=True,editable=False)
     plant_name = models.CharField(max_length=200)
-    added_date = models.DateTimeField('date added')
+    added_date = models.DateField('date added')
 
     def __str__(self):
         return self.plant_name
