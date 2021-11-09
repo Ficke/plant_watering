@@ -3,7 +3,7 @@
 {% block content %}
 {% if water_list %}
     <p>{{ water_list.watered_plant }}</p>
-    Latest Waterings:
+    Latest Watering:
     <ul>
 
     {% for water in water_list %}
@@ -12,6 +12,6 @@
     {% endfor %}
     </ul>
 {% else %}
-    <p>No waterings are available.</p>
+    <p>We couldn't find any waterings. Are your plants thirsty?</p>
 {% endif %}
 {% endblock %}

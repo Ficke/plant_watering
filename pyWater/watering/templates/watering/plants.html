@@ -2,14 +2,23 @@
 
 {% block content %}
 {% if plant_list %}
-    Current List of Plants:
     <ul>
-    {% for plant in plant_list %}
-        <p><a href="/watering/{{ plant.id }}">{{ plant.plant_name }}</a></p>
 
-    {% endfor %}
+              <div class="title">Current Crop of Plants:</div>
+              <div class="row">
+                  <div class="col-4"> Plant Name </div>
+                  <div class="col-4"> Date Added </div>
+              </div>
+
+    {% for plant in plant_list %}
+        <div class="row">
+            <div class="col-4"> <a href="/watering/{{ plant.id }}">{{ plant.plant_name }}</a> </div>
+            <div class="col-4"> {{plant.added_date}} </div>
+        </div>
+        {% endfor %}
     </ul>
 {% else %}
-    <p>No plants are available.</p>
+    <p>You don't have any plants yet. Why don't you go out and get some!</p>
 {% endif %}
 {% endblock %}
+
