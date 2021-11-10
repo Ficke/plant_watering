@@ -25,13 +25,13 @@
           </li>
           {% if user.is_authenticated %}
           <li class="nav-item">
-            <a class="nav-link" href="/watering/plants">View Plants</a>
+            <a class="nav-link" href="{% url 'watering:plants_list' %}">View Plants</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/watering/addplant">Add Plant</a>
+            <a class="nav-link" href="{% url 'watering:add_plant' %}">Add Plant</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/watering/watering">Watering</a>
+            <a class="nav-link" href="{% url 'watering:watering' %}">Watering</a>
           </li>
             {% endif %}
           <li class="nav-item dropdown">

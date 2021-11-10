@@ -12,7 +12,7 @@
 
     {% for plant in plant_list %}
         <div class="row">
-            <div class="col-4"> <a href="/watering/{{ plant.id }}">{{ plant.plant_name }}</a> </div>
+            <div class="col-4"> <a href="{% url 'watering:water'  plant.id  %}">{{ plant.plant_name }}</a> </div>
             <div class="col-4"> {{plant.added_date}} </div>
         </div>
         {% endfor %}

@@ -7,9 +7,9 @@ from . import views
 app_name = 'watering'
 
 urlpatterns = [
-    path('addplant',views.add_plant,name='add plant'),
-    path('plants',views.show_plants,name='plants list'),
+    path('addplant',views.add_plant,name='add_plant'),
+    path('plants',views.show_plants,name='plants_list'),
     path('watering',views.water,name='watering'),
-    path('<str:name>/',views.show_water,name='water')
+    path('<int:name>/',views.show_water,name='water')
 ]
 
