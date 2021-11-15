@@ -1,0 +1,30 @@
+name: pyWater
+channels:
+  - default
+dependencies:
+  - ncurses=6.2
+  - openssl
+  - pip=21
+  - python=3.9.7
+  - readline=8.1
+  - setuptools
+  - tk=8.6.11
+  - tzdata=2021e
+  - wheel=0.37.0
+  - xz=5.2.5
+  - zlib=1.2.11
+  - pip:
+    - asgiref==3.4.1
+    - certifi==2021.10.8
+    - charset-normalizer==2.0.7
+    - django==3.2.9
+    - django-environ==0.8.1
+    - django-tables2==2.4.1
+    - idna==3.3
+    - psycopg2-binary
+    - pytz==2021.3
+    - requests==2.26.0
+    - sqlparse==0.4.2
+    - urllib3
+    - pg_config
+prefix: /Users/adamficke/Projects/plant_watering/envs

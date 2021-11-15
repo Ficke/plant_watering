@@ -133,3 +133,7 @@ pyWater/environment.yml
 
 /staticfiles
 
+.env.prod.db
+.gitignore
+.env.dev
+.env.prod
