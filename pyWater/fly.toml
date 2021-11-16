@@ -1,13 +1,13 @@
-# fly.toml file generated for dry-moon-5575 on 2021-11-14T19:39:21-05:00
+# fly.toml file generated for restless-shadow-9689 on 2021-11-15T17:07:55-05:00
 
-app = "dry-moon-5575"
+app = "restless-shadow-9689"
 
 kill_signal = "SIGINT"
 kill_timeout = 5
 processes = []
 
 [build]
-  image = "string=Dockerfile.prod"
+  image = "Dockerfile.prod"
 
 [env]
 
