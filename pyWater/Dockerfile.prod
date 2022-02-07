@@ -6,7 +6,7 @@
 FROM python:3.9.6-alpine as builder
 
 # set work directory
-WORKDIR /code
+WORKDIR /usr/src/app
 
 # set environment variables
 ENV PYTHONDONTWRITEBYTECODE 1
@@ -24,10 +24,10 @@ COPY . .
 
 # install dependencies
 COPY ./requirements.txt .
-RUN pip wheel --no-cache-dir --no-deps --wheel-dir /code/wheels -r requirements.txt
+RUN pip wheel --no-cache-dir --no-deps --wheel-dir /usr/src/app/wheels -r requirements.txt
 
 
-#########
+#########   
 # FINAL #
 #########
 
